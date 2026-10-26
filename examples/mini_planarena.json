@@ -1,0 +1,42 @@
+[
+  {
+    "instruction": "You are a tool-using assistant. Available tool: get_weather(city: string). Always emit a <plan> followed by a tool call or response.",
+    "input": "<user>What is the weather in Paris?</user>",
+    "output": "<plan> Retrieve the current weather for Paris. </plan>\n<tool_call>\n{\"name\": \"get_weather\", \"parameters\": {\"city\": \"Paris\"}}\n</tool_call>",
+    "trajectoryID": "mini-weather-1",
+    "currentToolCount": 1,
+    "totalToolCount": 2,
+    "finalAnswer": false,
+    "negative": [{"name": "get_forecast", "relevance": "0.2"}]
+  },
+  {
+    "instruction": "You are a tool-using assistant. Available tool: get_weather(city: string). Always emit a <plan> followed by a tool call or response.",
+    "input": "<user>What is the weather in Paris?</user>\n<plan> Retrieve the current weather for Paris. </plan>\n<tool_call>\n{\"name\": \"get_weather\", \"parameters\": {\"city\": \"Paris\"}}\n</tool_call>\n<obs>18 C and clear</obs>",
+    "output": "<plan> Return the observed weather to the user. </plan>\n<response> It is 18 C and clear in Paris. </response>",
+    "trajectoryID": "mini-weather-1",
+    "currentToolCount": 2,
+    "totalToolCount": 2,
+    "finalAnswer": true,
+    "negative": []
+  },
+  {
+    "instruction": "You are a tool-using assistant. Available tool: search_flight(origin: string, destination: string). Always emit a <plan> followed by a tool call or response.",
+    "input": "<user>Find a flight from Shanghai to Beijing.</user>",
+    "output": "<plan> Search available flights for the requested route. </plan>\n<tool_call>\n{\"name\": \"search_flight\", \"parameters\": {\"origin\": \"Shanghai\", \"destination\": \"Beijing\"}}\n</tool_call>",
+    "trajectoryID": "mini-flight-1",
+    "currentToolCount": 1,
+    "totalToolCount": 2,
+    "finalAnswer": false,
+    "negative": [{"name": "cancel_flight", "relevance": "0.0"}]
+  },
+  {
+    "instruction": "You are a tool-using assistant. Available tool: search_flight(origin: string, destination: string). Always emit a <plan> followed by a tool call or response.",
+    "input": "<user>Find a flight from Shanghai to Beijing.</user>\n<obs>MU5101 departs at 08:00.</obs>",
+    "output": "<plan> Present the available flight to the user. </plan>\n<response> MU5101 departs Shanghai for Beijing at 08:00. </response>",
+    "trajectoryID": "mini-flight-1",
+    "currentToolCount": 2,
+    "totalToolCount": 2,
+    "finalAnswer": true,
+    "negative": []
+  }
+]

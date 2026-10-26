@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use DUPO, please cite the paper and this software."
+title: "DUPO: Dual-Mode Unified Policy Optimization for Tool-Using Agents"
+type: software
+authors:
+  - name: "DeepAction Team"
+license: CC-BY-NC-4.0
+version: 0.1.0
+date-released: 2026-08-28
+abstract: "A verl-based training recipe for typed PLAN-TOOL trajectories in tool-using agents."

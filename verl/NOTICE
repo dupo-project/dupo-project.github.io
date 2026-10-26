@@ -1,0 +1,3 @@
+Copyright 2023-2024 Bytedance Ltd. and/or its affiliates
+
+This runtime-only subtree is derived from volcengine/verl and includes modifications for the DUPO/DeepAction training recipe. See the repository-level THIRD_PARTY_NOTICES.md for provenance and license scope.
